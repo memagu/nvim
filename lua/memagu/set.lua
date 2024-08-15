@@ -14,7 +14,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("XDG_STATE_HOME") .. "/nvim/undodir"
+vim.opt.undodir = (os.getenv("XDG_STATE_HOME") and os.getenv("XDG_STATE_HOME") .. "/nvim/undodir") or (os.getenv("LOCALAPPDATA") .. "\\nvim\\undodir")
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
